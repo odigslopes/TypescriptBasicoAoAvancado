@@ -1,3 +1,4 @@
 2023-03-03 03:15:19:1519 - [31merror[39m: [31mNão foi possível conectar![39m
 2023-03-03 03:15:19:1519 - [31merror[39m: [31mErro: MongoServerError: bad auth : authentication failed[39m
 2023-03-03 03:16:57:1657 - [31merror[39m: [31mNão foi possível conectar![39m
+2023-03-03 04:30:41:3041 - [31merror[39m: [31mErro no sistema: Cast to ObjectId failed for value "6401a07a1c7676ae2ddd10989" (type string) at path "_id" for model "Movie"[39m
