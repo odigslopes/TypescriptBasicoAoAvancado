@@ -1,0 +1,41 @@
+2023-03-03 03:13:48:1348 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:14:45:1445 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:14:45:1445 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:15:19:1519 - [31merror[39m: [31mNão foi possível conectar![39m
+2023-03-03 03:15:19:1519 - [31merror[39m: [31mErro: MongoServerError: bad auth : authentication failed[39m
+2023-03-03 03:15:19:1519 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:15:27:1527 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:15:27:1527 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:15:54:1554 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:15:54:1554 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:16:04:164 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:16:04:164 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:16:08:168 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:16:08:168 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:16:20:1620 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:16:20:1620 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:16:57:1657 - [31merror[39m: [31mNão foi possível conectar![39m
+2023-03-03 03:17:18:1718 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:17:18:1718 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:18:40:1840 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:18:40:1840 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:24:31:2431 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:24:31:2431 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:24:54:2454 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:24:54:2454 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:25:16:2516 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:25:16:2516 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:25:20:2520 - [35mhttp[39m: [35mGET /api/test 200 12 - 2.584 ms[39m
+[35m[39m
+2023-03-03 03:32:40:3240 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:32:40:3240 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:34:24:3424 - [35mhttp[39m: [35mPOST /api/movie 200 30 - 2.623 ms[39m
+[35m[39m
+2023-03-03 03:36:33:3633 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:36:33:3633 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:37:13:3713 - [35mhttp[39m: [35mPOST /api/movie 201 153 - 150.528 ms[39m
+[35m[39m
+2023-03-03 03:42:15:4215 - [32minfo[39m: [32mConectou ao banco de dados![39m
+2023-03-03 03:42:15:4215 - [32minfo[39m: [32mAplicação está funcionando na porta: 3000[39m
+2023-03-03 03:42:35:4235 - [35mhttp[39m: [35mPOST /api/movie 201 155 - 143.369 ms[39m
+[35m[39m
