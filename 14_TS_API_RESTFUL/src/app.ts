@@ -22,9 +22,13 @@ import Logger from "../config/logger";
 // Middleware
 import morganMiddleware from "./middleware/morganMiddleware";
 
-app.use(morganMiddleware);
+// Swagger
+import swaggerUi from "swagger-ui-express";
+import swaggerDocs from "./swagger.json";
 
+app.use(morganMiddleware);
 app.use("/api/", router);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // app port
 const port = config.get<number>("port");

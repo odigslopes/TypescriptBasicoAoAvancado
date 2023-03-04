@@ -1,0 +1,268 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API de manipulação de filmes",
+    "description": "API com objetivo de manipulação dos filmes",
+    "termOfService": "https://localhost:3000/terms",
+    "contact": {
+      "email": "diegolopes.vieira@hotmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "description": "API de teste"
+    }
+  ],
+  "paths": {
+    "/movie": {
+      "post": {
+        "summary": "Cadastro de filmes",
+        "description": "Essa rota será responsável por cadastrar um novo filme",
+        "tags": [
+          "Movie"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Movie"
+              },
+              "examples": {
+                "movie": {
+                  "value": {
+                    "title": "The last of us",
+                    "rating": "10",
+                    "description": "The Last of Us é uma franquia de jogos eletrônicos de ação-aventura e survival horror exclusiva da PlayStation, criada por Neil Druckmann.",
+                    "director": "Greg Spence",
+                    "stars": [
+                      "Pedro Pascal",
+                      "Bella Ramsey"
+                    ],
+                    "poster": "https://br.web.img3.acsta.net/pictures/22/11/30/19/53/5856320.jpg"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "500": {
+            "description": "Por favor, tente mais tarde.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/500"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Erro de validações",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/422"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Movie"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "Busca todos os filmes",
+        "summary": "Buscar todos os filmes",
+        "tags": [
+          "Movie"
+        ],
+        "responses": {
+          "200": {
+            "description": "Filme encontrado"
+          },
+          "404": {
+            "description": "Filme não encontrado"
+          }
+        }
+      }
+    },
+    "/movie/{id}": {
+      "get": {
+        "description": "Busca de um produto pelo ID",
+        "summary": "Busca de um produto pelo ID",
+        "tags": [
+          "Movie"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do filme para busca",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Filme não encontrado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remover um filme pelo ID",
+        "description": "Remover um filme pelo ID",
+        "tags": [
+          "Movie"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID do filme a ser removido"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Filme removido com sucesso"
+          },
+          "404": {
+            "description": "Filme não encontrado"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      },
+      "patch": {
+        "description": "Atualizar algum dado do filme pelo ID",
+        "summary": "Atualizar algum dado do filme pelo ID",
+        "tags": [
+          "Movie"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Atualizar com base o ID",
+            "required": "true"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Por favor, tente mais tarde.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/500"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O filme não existe.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/404"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Movie": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "director": {
+            "type": "string"
+          },
+          "stars": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "poster": {
+            "type": "string"
+          }
+        }
+      },
+      "404": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "O filme não existe."
+          }
+        }
+      },
+      "422": {
+        "description": "Erro de validações",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "erros": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "field": {
+                        "type": "string"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Por favor, tente mais tarde."
+          }
+        }
+      }
+    }
+  }
+}

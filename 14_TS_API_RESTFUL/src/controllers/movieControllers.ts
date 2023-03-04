@@ -34,8 +34,8 @@ export async function findMovieById(req: Request, res: Response) {
 
 export async function getAllMovies(req: Request, res: Response) {
   try {
-    const movies = await MovieModel.find();
-    return res.status(200).json(movies);
+    const movie = await MovieModel.find();
+    return res.status(200).json(movie);
   } catch (e: any) {
     Logger.error(`Erro no sistema: ${e.message}`);
     return res.status(500).json({ error: "Por favor, tente mais tarde." });
